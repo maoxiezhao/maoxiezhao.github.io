@@ -50,6 +50,16 @@
     @include media-breakpoint-down(md) {
       height: map-get($layout, header-height-sm);
     }
+    & > .header__brand__title {
+      @include flex(0);
+      & > .header__brand__title_name {
+        font-size: map-get($base, font-size-h4);
+      }
+      & > .header__brand__title_slogan {
+        font-size: map-get($base, font-size-h7);
+        font-style: italic;
+      }
+    }
   }
   & > .search-button {
     display: none;

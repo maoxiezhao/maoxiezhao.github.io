@@ -1,8 +1,10 @@
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="24px" height="24px" viewBox="0 0 24 24">
-<style type="text/css">
-	.st0{fill:#515151;}
-</style>
-<path class="st0" d="M1.7,22.3c5.7-5.7,11.3-5.7,17,0c3.3-3.3,3.5-5.3,0.8-6c2.7,0.7,3.5-1.1,2.3-5.6s-3.3-5.2-6.3-2.1
-	c3-3,2.3-5.2-2.1-6.3S7,1.8,7.7,4.6C7,1.8,5,2.1,1.7,5.3C7.3,11,7.3,16.7,1.7,22.3"/>
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="64" height="64">
+	<title>favicon-256 (1)</title>
+	<defs>
+		<image  width="138" height="169" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIoAAACpBAMAAAAGkbjPAAAAAXNSR0IB2cksfwAAABhQTFRFAAAAVFRUVVVVVFRUVVVVUVFRVVVV////g/D4mwAAAAh0Uk5TAJj/gGkmsgCS/z9FAAAD50lEQVR4nO3aTU/bQBAG4CAVekWkks924pwLQeJagSKutIq018oXrkUE/PcbxzjMer7erbcSqrpHsB/7zc6sHcezWTcuqsMo1/tx/TDzxnZ9GJf9XtV5/9ezio5y7YzLKh6rGT2VPx6HkzmdiFR1p3yaqpR75PPzVKX6r/xtZZdFecmitFM7oFeuPpBym0X5kUV5mogcerqdWnY/cyjdqUxV5v1yDyvzRjiPTftr1itmI82HpX/DJ6G8Du1RERvpbe9Nexy8IOruz4MyaqRytPcweKAiUuIWCBzohlBVQVdKGREC9VvKykJReKDHdEULpCjLtECKUqOBaksp0ECFpdyAgVZtusJX+NpU7iVEaJLCVIKkvHIlWIpcujzQcTtREYtOCFQz5dZT9HkmCp1GsXT1eSYKPZRYuo0e6F2hC28hIFYgWZHKRbh4BlsJgsIDkXqQFKlchEC1rUgTLQQq0hVeuKtWUHamYhUuVch2QtEJnVhICjlnoeiEm8cgKq/iUdRA0US+K8eKWDHEmedIGTZ95Io9z5HSbi/Zqb6NhiHxCVNl7+y/BYf0QCNFGV4gTHHmGVO8ecYUoXBH84gobiBE8QMhihBo3GmAIgQqkhUhEOs0X3ELF1LcwoWUxg/kK0ggX0EC+Yp9CQEV5xICKuatAqxY9z64wudZukVyFCyQp5j3PrBi3OPiijDPwjXPU4yb9gQFDGQraCBbQQPZChrIVLBO9BSwcB0F60RPadBAloIHshQ8kKXoX58TFOPrc4LCC1cNZCgJgXQlJZCuwJ1oKnAnWgq8tJiK+iArSVEfZCUpTUogTUkLpClpgTSFz7MVSFGEebYCKQovXDOQoqR0oqokdaKqpCwtupIaSFSSA4kKL1wnkKgoD/0TlQYM9HI3/GIgKHCg/STMN5qCBurr4UuQFT7PcqC34KWooJ14LM1HSUE78YL8myvg0kJOOXAFDUSe791zBQ1EnjXecAVdK00FXitNBV4rnywFXlp+GAq+tNwaCr60XNHjjBR8abmim4wUtBMjZTlS+MeirpXkeIuRwudZC0SPN1bwQDtdSQj0rCt4IEvBA0WFFSspdy20sMpIEX4I15D4LYpAFV64+m1Y/MMiVRo8UPwR3ghP8pFA8UdIlZRAO1VhgZSSe7lbr9eawgPFJbcdXmrgVUUUHqige4/fhZOVLT9E2Dp7M+U7/1+JAFTZwjsYyskkY1CaiUrRKWf+dvaoO2Xye1vLTpmKVIt/TimzKNVDFuVbFuVrFuU8i1JnUZZZlMUHUpY5evrw6U5eX/q3mpvoT+4L1uyi1L9hfUL3Bl723o/TO3KR6k7lNxzw0eUHhdVMAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Background" href="#img1" x="59" y="43" />
 </svg>

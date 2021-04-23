@@ -1,16 +1,30 @@
 header:
   - titles:
+      en      : &EN       Home
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  主页
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  主页
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+    url:        /index.html
+  - titles:
       # @start locale config
       en      : &EN       Archive
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      zh-Hans : &ZH_HANS  归档
+      zh-Hans : &ZH_HANS  文章
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  歸檔
+      zh-Hant : &ZH_HANT  文章
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
       ko      : &KO       아카이브
@@ -23,6 +37,22 @@ header:
       fr-LU   : *FR
       # @end locale config
     url: /archive.html
+
+  - titles:      
+      en      : &EN       Projects
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh-Hans : &ZH_HANS  项目
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-Hant : &ZH_HANT  項目
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+    url:        /projects.html
+    key:        projects
 
   - titles:
       # @start locale config
