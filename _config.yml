@@ -114,10 +114,10 @@ comments:
   gitalk:
     clientID    : 03832ac991d020000358 # GitHub Application Client ID
     clientSecret: 06aabff554edf1827ce248ddec60488b1b9557fe # GitHub Application Client Secret
-    repository  : GithubPagesComments # GitHub repo
+    repository  : maoxiezhao.github.io # GitHub repo
     owner       : maoxiezhao # GitHub repo owner
-    admin       : maoxiezhao # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
-      # - your GitHub Id
+    admin       : # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
+      - maoxiezhao
 
   ## Valine
   # please refer to https://valine.js.org/en/ for more info.
