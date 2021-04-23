@@ -24,9 +24,8 @@ email: 844635471@qq.com
 description: >- # this means to ignore newlines until "baseurl:"
   A little home of ZZZY.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: ZZZY
-github_username:  ZZZY
+url: https://maoxiezhao.github.io # the base hostname & protocol for your site, e.g. http://example.com
+github_username:  maoxiezhao
 
 # Build settings
 theme: jekyll-text-theme
@@ -40,7 +39,7 @@ lang: zh-Hans
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : ZZZY
+  name      : maoxiezhao
   email     : 844635471@qq.com
   github    : maoxiezhao
 
@@ -52,6 +51,10 @@ paths:
   archive : # "/archive.html" (default)
   rss     : # "/feed.xml" (default)
 
+## => GitHub Repository (if the site is hosted by GitHub)
+##############################
+repository: maoxiezhao/maoxiezhao.github.io
+repository_tree: master
 
 ## => Post
 ##############################
@@ -110,8 +113,8 @@ comments:
   # please refer to https://github.com/gitalk/gitalk for more info.
   gitalk:
     clientID    : 03832ac991d020000358 # GitHub Application Client ID
-    clientSecret: c3292d5af37fa7699bf3c7b52e62925c0f32a8da # GitHub Application Client Secret
-    repository  : https://github.com/maoxiezhao/GithubPagesComments # GitHub repo
+    clientSecret: 06aabff554edf1827ce248ddec60488b1b9557fe # GitHub Application Client Secret
+    repository  : maoxiezhao.github.io # GitHub repo
     owner       : maoxiezhao # GitHub repo owner
     admin       : maoxiezhao # GitHub repo owner and collaborators, only these guys can initialize GitHub issues, IT IS A LIST.
       # - your GitHub Id
