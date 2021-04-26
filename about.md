@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: page
 ---
 
 ## 个人简介
