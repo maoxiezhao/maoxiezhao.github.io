@@ -1,15 +1,18 @@
 ---
 layout: post
 title: "About"
-author: "Chester"
+author: "ZZZZY"
 permalink: /about/
 ---
 
-A friend of mine writes short stories. One sunny day, I asked if he wanted a website to showcase his works and he agreed. I decided to use GitHub Pages to host his site. That way he wouldn't have to buy a domain and a server.
+>In case I don't see you...  
+Good afternoon, good evening, and good night.
 
-While doing some research up on GitHub Pages, I accidentally chanced upon this _simple, blog-aware, static site generator_ called [Jekyll](https://jekyllrb.com/) which works really well with GitHub Pages. I figured it would do just fine for my friend and I set about searching for a pretty theme. I wanted a theme with a _book-ish_ vibe. Unfortunately, most of the themes were too modern. Eventually, I caved and begun working on my own theme. With the help of [Poole](https://github.com/poole/poole), the Jekyll Butler, I was able to build **Tale**.
+人生在世，最不能掌握恰恰是自己的命运，所以才希望能有一块小小的天地，以字为田，漫心耕耘。
+  
+只是一个普普通通的游戏开发者，随波逐流，能做自己想做的事，是自己最大的渴求。
 
-## Contribute
-Feel free to create an issue or make a pull request on [GitHub](https://github.com/chesterhow/tale).
+喜欢游戏，喜欢观影
 
-Thanks for reading!
+期待与不相识的你，三言两语，做个朋友
+
