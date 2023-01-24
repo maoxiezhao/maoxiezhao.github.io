@@ -4,9 +4,6 @@ title:  "Hello World!"
 author: "ZZZZZY"
 comments: true
 tags: Note
-excerpt_separator: <!--more-->
-sticky: true
-hidden: true
 ---
 
 &emsp;&emsp;再次向个人blog说句你好，距离上次写个人blog已经将近过去了快4年。那会还是用着校园廉价版的阿里云，备案了域名，基于WordPress构建的blog系统，还想着好好维护一番，结果基于各种原因（主要还是懒）没有再维护，后来服务器到期了，几篇博文也随之烟消云散。
