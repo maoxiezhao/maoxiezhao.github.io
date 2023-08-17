@@ -14,6 +14,8 @@ excerpt_separator: <!--more-->
 
 一个非常好的简短的关于Physis的系列教程：https://matthias-research.github.io/pages/tenMinutePhysics/index.html
 
+<!--more-->
+
 ### 1.PBD(Position Base Dynamic)
 个人理解物理模拟的核心就是求解物理约束，一般物理引擎在求解约束时，会通过施加力（冲量）来修改速度，然后依赖速度修改系统状态以达到约束要求，本质上就是一个牛顿形式的物理运动学计算（Emmmm这对于力学的朋友来说应该很简单，但对于我这种学渣来说，光是实现一个带摩擦力的球体碰撞模拟就已经100%CPU运转，这里有个坑点，以后会开个坑讲讲篮球游戏的故事）
 
@@ -34,9 +36,28 @@ loop:
 	forall vertices i do
 		Vi = Vi + DeltaTime * FuncExt(Xi) * Wi
 	endfor
-
 	
+	DampVelocities(V1..Vn)
+	
+	forall vertices i do
+		Pi = Xi + DeltaTime * Vi
+	endfor
 
+	forall vertices i do
+		GenerateCollsionConstraints(Xi -> Pi)
+	endfor
+
+	loop SolverIterations times
+		ProjectConstraints(C1, C2... CN, P1, P2... Pn)
+	endloop
+
+	forall vertices i do
+		Vi = (Pi - Xi) / DeltaTime
+		Xi = Pi
+	endfor
+
+	VelocityUpdate(V1, V2,.. Vn)
+endLoop
 ```
 
 
