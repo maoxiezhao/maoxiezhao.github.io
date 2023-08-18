@@ -10,8 +10,8 @@ excerpt_separator: <!--more-->
 
 ## 前言
 
-终于来到了我最想开的坑系列，毕竟自嗨的最高境界就是基于自嗨而撸的引擎上，再写关于它的自嗨文章。
-首先这将是自嗨系列的第一个文章，也将是这个系列的入口，我将会简单介绍下NeptuenEngine，同时会规划（画饼）后续关于这个系列的文章  
+终于来到了我最想开的坑系列，毕竟自嗨的最高境界就是基于自嗨而撸的引擎上，再写关于它的自嗨文章。首先这将是自嗨系列的第一个文章，也将是这个系列的入口，我将会简单介绍下NeptuenEngine，同时会规划（画饼）后续关于这个系列的文章
+
 NeptuenEngine是一个完全是因为想去做而去做的一个开源引擎，<!--more--> 当然要说的好听点，这是一个用来学习各种功能模块的沙盒，Neptune引擎的实现参考了（抄了）许多的开源引擎和大名鼎鼎的UE，而且目前这个NeptuenEngine并没有开源，但是可以参考NeptuenEngine的初代版本：https://github.com/maoxiezhao/NeptuneEngine.git   *PS:等开源了这段会被替换掉* 
 
 回到正文，NeptuenEngine是一个基于C++17和Vulkan的引擎，基于模块化设计，实现（尝试实现）引擎一些常见的模块，包括但不限于基础的Core模块、RHI、Renderer、Resource、Level、Animation、Script、Editor等等。整体目标是朝着现代化，高性能的方向前进，当然主要是为了自嗨。预计开坑的文章如下：

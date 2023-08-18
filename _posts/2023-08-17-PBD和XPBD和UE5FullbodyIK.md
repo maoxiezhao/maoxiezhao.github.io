@@ -8,9 +8,7 @@ excerpt_separator: <!--more-->
 ---
 *当前版本比较潦草，仅仅为了记录，后续会陆续修改*
 
-项目中对攀爬等一些全身行为使用了UE的FullbodyIK，而从UE5开始FullbodyIK使用类似于PBD的方式实现，所以文章将会从基础的PBD开始，到XPBD，最后到UE5的FullbodyIK。
-
-原则上来说会尽量省去数学步骤，作为普通的开发+数学渣，就把注意力专注于实现的思想上
+项目中对攀爬等一些全身行为使用了UE的FullbodyIK，而从UE5开始FullbodyIK使用类似于PBD的方式实现，所以文章将会从基础的PBD开始，到XPBD，最后到UE5的FullbodyIK。原则上来说会尽量省去数学步骤，作为普通的开发+数学渣，就把注意力专注于实现的思想上
 
 一个非常好的简短的关于Physis的系列教程：https://matthias-research.github.io/pages/tenMinutePhysics/index.html
 
@@ -59,7 +57,3 @@ loop:
 	VelocityUpdate(V1, V2,.. Vn)
 endLoop
 ```
-
-
-
-<!--more-->
