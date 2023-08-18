@@ -81,6 +81,7 @@ $$
 $$
 \Delta p =-\frac {C(p)} {|\nabla p C(p)|^2} \nabla p C(p)
 $$
+
 然后这只是一个质点对于另一个质点的约束，对于该质点包含的所有约束，基于Newton-Raphson方法得到该质点最终的DealtaP为
 
 $$
