@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "UE中的AnimNotify源码浅析"
+title:  "UE中的AnimNotify"
 author: "ZZZZZY"
 comments: true
 tags: Dev

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "手撸自嗨引擎NeptuneEngine(一)BuildSystem"
+title:  "NeptuneEngine(一)BuildSystem"
 author: "ZZZZZY"
 comments: true
 tags: Dev
