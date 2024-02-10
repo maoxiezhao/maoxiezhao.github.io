@@ -1,8 +1,10 @@
 ---
 layout: compress
 ---
+
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: " en " }}">
+
 {% include header.html %}
 
 <body data-theme="{{ site.mode }}" class="notransition">
@@ -28,11 +30,20 @@ layout: compress
 
   {% include navbar.html %}
   <div class="wrapper">
-    {% include author.html %}
-    <main aria-label="Content">
-      {{ content }}
+    <div id="page-title-parent">
+      <img alt="unfurl" id="header-background-image-resource" rel="preload" src="{{ page.imglink }}">
+      <div id="page-title-gradient"></div>
+      <div id="page-title"><h1>{{ page.title | escape }}</h1><p>{{ page.tips }}.</p></div>
+    </div>
+    <!-- <header class="header">
+      <h1 class="header-title center" itemprop="headline">{{ page.title | escape }}.</h1>
+    </header> -->
+    <br>
+    <main class="page-content" aria-label="Content">
+      {% include anchor_headings.html html=content anchorClass="anchor-head" beforeHeading=true h_min=4 h_max=4 %}
     </main>
     {% include footer.html %}
   </div>
 </body>
+
 </html>

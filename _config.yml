@@ -1,40 +1,91 @@
 # Site settings
-title:          ZZZZZY
-description:    "A cool game development blog"
-url:            "https://maoxiezhao.github.io"
+title: ZZZZZY # site title
+description: >- # site description
+  A cool game development blog
+lang: en-US # default lang
+timezone: Asia/Jakarta # set your timezone
+image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
+repo: https://github.com/maoxiezhao # site repo [optional]
+mode: dark # default theme "dark" | "light"
 
-# Google Analytics
-google_analytics: UA—XXXXXXXX-X
-
-# Author
+# Profile settings
 author:
-  name:         ZZZZZY
-  url:          https://github.com/maoxiezhao
-  email:        844635471@qq.com
+  name: ZZZZZY # author name
+  tags: 游戏客户端开发&游戏全栈技术爱好者&观影者
+  bio: >- # tell to the world
+    一个个人技术博客，相比于写技术文章，更喜欢来几句碎碎念^__^.
+  username: ZZZZZY # general username
+  github: maoxiezhao # github username
+  twitter: maoxiezhao # twitter username
+  facebook: maoxiezhao # facebook username
+  email: 844635471@qq.com # email adress
+  avatar: /assets/img/avatar.jpg # change with your own avatar
+
+# URL settings
+url: "https://maoxiezhao.github.io" #
+baseurl:
+permalink: /:year-:month-:day/:title
+google_analytics: # leave it blank if not wish
+fb_appid:
+
+# Collection setting
+collections:
+  posts:
+    output: true
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: post
+      comments: false
+
+# Jekyll Compose default front matter
+jekyll_compose:
+  post_default_front_matter:
+    modified:
+    tags: []
+    description:
+  draft_default_front_matter:
+    modified:
+    tags: []
+    description:
+
+# Homepage limit posts
+number_of_posts: 6
 
 # Build settings
-markdown:       kramdown
-include:
-  - _pages
-
-# Assets
+# theme: klise
 sass:
-  sass_dir:     _sass
-  style:        compressed
+  style: compressed
 
-# Gems
+include:
+  - _redirects
+  - .htaccess
+
+exclude:
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - CHANGELOG.md
+  - README.md
+  - node_modules
+  - CODE_OF_CONDUCT.md
+  - CONTRIBUTING.md
+  - lighthouse.png
+  - klise-*.gem
+  - klise.gemspec
+
+# Plugins
 plugins:
   - jekyll-feed
-  - jekyll-paginate
-  - jekyll-seo-tag
-  # - jemoji #Uncomment this to allow emoji in your post
-
-# Permalinks
-permalink:      /:year-:month-:day/:title
-paginate:       5
-
-# Excludes
-exclude: [ Gemfile, Gemfile.lock, tale.gemspec ]
-
-# Disqus (Set to your disqus id)
-disqus:         zhao_yang
+  - jekyll-sitemap
+  - jekyll-postfiles
