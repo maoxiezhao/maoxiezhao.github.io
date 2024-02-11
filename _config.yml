@@ -3,7 +3,7 @@ title: ZZZZZY # site title
 description: >- # site description
   A cool game development blog
 lang: en-US # default lang
-timezone: Asia/Jakarta # set your timezone
+timezone: Asia/Shanghai # set your timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
 repo: https://github.com/maoxiezhao # site repo [optional]
 mode: dark # default theme "dark" | "light"
