@@ -2,39 +2,6 @@ body[data-theme="dark"] {
   color: $dark-text-base-color;
   background-color: $dark-black;
 
-  @keyframes fadeIn
-  {
-    0% 		{ opacity:0.0; }
-    100% 	{ opacity:0.3; }
-  }
-  
-  .home-background
-  {
-    background: url("https://s11.ax1x.com/2024/02/16/pFGUvNR.jpg");
-    // background-color: #fffba0;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.0;
-    margin: 0;
-    padding:0;
-    border: 0;
-    outline: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    animation: fadeIn 1.6s;
-    animation-iteration-count:1;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in-out;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }  
-
   // Heading
   h1,
   h2,
@@ -153,6 +120,33 @@ body[data-theme="dark"] {
     color: $dark-white;
   }
 
+  // HomtBackground
+  .home_background
+  {
+    background: url("https://s11.ax1x.com/2024/02/16/pFGUvNR.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.0;
+    margin: 0;
+    padding:0;
+    border: 0;
+    outline: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    animation: homeBgFadeIn 1.6s;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    // -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    // -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
   // Navbar
   .navbar {
     border-color: $dark-light;

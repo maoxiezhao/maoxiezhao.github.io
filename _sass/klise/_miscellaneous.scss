@@ -9,6 +9,12 @@
   }
 }
 
+@keyframes homeBgFadeIn
+{
+  0% 		{ opacity:0.0; }
+  100% 	{ opacity:0.3; }
+}
+
 // Animation blur
 @keyframes blur {
   0% {
