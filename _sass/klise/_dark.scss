@@ -119,34 +119,6 @@ body[data-theme="dark"] {
   b {
     color: $dark-white;
   }
-
-  // HomtBackground
-  .home_background
-  {
-    background: url("https://s11.ax1x.com/2024/02/16/pFGUvNR.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.3;
-    margin: 0;
-    padding:0;
-    border: 0;
-    outline: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    // animation: homeBgFadeIn 1.6s;
-    // animation-iteration-count:1;
-    // animation-fill-mode: forwards;
-    // animation-timing-function: ease-in-out;
-    // transform-style: preserve-3d;
-    // backface-visibility: hidden;
-
-    // -webkit-transform-style: preserve-3d;
-    // -webkit-backface-visibility: hidden;
-  }
   
   // Navbar
   .navbar {
