@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "突如其来的非正式年中总结"
+title:  "非正式年中总结"
 author: "ZZZZZY"
 comments: true
 tags: Note
