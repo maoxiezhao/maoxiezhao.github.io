@@ -3,7 +3,7 @@ layout: post
 title:  "Herringbone Wang Tiles"
 author: "ZZZZZY"
 comments: true
-tags: Dev
+tags: Dev MapGen
 excerpt_separator: <!--more-->
 ---
 最近在工作之余的午休时间发现了Herringbone Wang Tiles，用于实现随机地牢的生成。一些比较知名的肉鸽游戏都基于此算法来实现随机地牢的生成，例如Noita、Moonring等等。恰好在年中的时候，想给自己的独立游戏实现一套随机地图生成算法，当时调研了许多方案，但是并未放过多注意力到Herringbone Wang Tiles。因此非常感兴趣，想借这个文章简单了解下这个算法。
@@ -40,6 +40,14 @@ WangTile还有一些其他问题，比如无法很好的支持Tile的旋转，�
 
 - 垂直矩形的右边缘的顶部始终邻接水平矩形的左边缘
 - 垂直矩形右边缘的底部始终邻接垂直矩形的左上边缘
+
+基于这种规则，能够满足铺满一个矩形区域。同时对于一个Tile而言，存在6种表现一致的边缘匹配模式（类似于WangTile的水平和垂直匹配）。事实上，可以把这种匹配方式视为一个特化的六边形匹配。在Cohen-et-al-style的平铺模式下，对于一个HerringboneTile来说需要处理3个边缘的约束匹配，假设我们存在8种匹配情况，那么就需要准备2 * 8 = 16种水平Tile和垂直Tile。如果需要满足完全随机集，则需要准备64种水平Tile和垂直Tile。最终可以形成一个拥有更多匹配模式，更少资源量的地图生成机制。
+
+------
+
+##### More on Herringbone Tile
+
+上文我们介绍了WangTile，并引入了HerringboneTile，简单介绍了其匹配机制。现在让我们专注于HerringboneTile，看看如何解决WangTile下所提出的一些问题。
 
 
 
