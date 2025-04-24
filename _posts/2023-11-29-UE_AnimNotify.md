@@ -19,7 +19,7 @@ USkeletalMeshComponent::TickPose
 	UAnimInstance::UpdateAnimation
         UAnimInstance::UpdateMontage
 			FAnimMontageInstance::Advance
-    			Montage::HandleEvent收集这个时间片的AnimNotifies
+    			Montage::HandleEvent
 ```
 
 触发AnimNotifyEvents：
