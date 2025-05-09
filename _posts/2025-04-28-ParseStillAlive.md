@@ -266,20 +266,59 @@ public partial class TdMove_ZipLine : TdPhysicsMove
 {
     public enum EZipLineStatus 
 	{
-		ZLS_Moving,
-		ZLS_CloseToEnd,
-		ZLS_Impact,
+		ZLS_Moving,		// zipline默认运动中
+		ZLS_CloseToEnd, // 接近Zipline末端
+		ZLS_Impact,     // 接触Zipline末端
 		ZLS_MAX
 	};
     
 	public override unsafe void PrePerformPhysics(float DeltaTime)
-	{
-		
+	{       
+        // 仅主控端和服务端调用后续逻辑
+        TdPawn PawnOwner = this.PawnOwner;
+        if (PawnOwner.Role < ROLE_AutonomousProxy)
+        {
+            return;
+        }
+        
+        // 计算角色当前的速度
+        // 大致思路就是计算角色所处的ZiplineSegment，基于Segment的两个端点和玩家的位置关系，计算当前的速度向量
+        // 主要是要让速度匹配上Zipline的方向，具体代码略过
+        FVector NewVelocity;
+        // ...
+        PawnOwne.Velocity = NewVelocity;
+        
+        // 处理ZiplineStatus
+        // 先检测运动路径上是否存在障碍
+        EZipLineStatus Status = this.ZiplineStatus;
+		FVector Start = PawnLocation;
+        FVector End = NextPoint; // 基于当前运动状态预测的目标点
+        if ( this.MovementTraceForBlocking(Start, End, a2))
+        {
+            if (Status == ZLS_Impact)
+            {
+                // 如果已经Impact则停止当前移动
+				PawnOwner.Velocity = FVector::ZeroVector;
+                PawnOwner.Acceleration = FVector::ZeroVector;
+            }
+            else if (Status == ZLS_CloseToEnd)
+            {
+				this.PlayForwardImpact();
+            }
+            else // Status == ZLS_Moving
+            {
+                // 先切换CloseToEnd状态
+            	this.PrepareForForwardImpact();
+          		this.ZipLineStatus = ZLS_CloseToEnd;
+            }
+        }
 	}
 }
 ```
 
-当触发PlayForwardImpact时，意味着角色已经到达了Zipline的另一端末尾（或者撞上障碍物）。我们需要结束Zipline状态。除此以外类似于这种状态式Move，还需要处理额外的一些打断行为，通过在一些回调中设置新的Move来退出ZiplineMove。
+PrePerformPhysics实现了和运动（速度）有关的所有逻辑，基于当前所处Zipline的Segment计算速度的向量，根据DeltaTime预测计算运动后的位置，并调用MovementTraceForBlocking检测运动路径上是否存在障碍，来驱动ZiplineStatus的切换。
+
+例如当ZiplineStatus等于ZLS_CloseToEnd时，会触发PlayForwardImpact，这意味着角色已经到达了Zipline的另一端末尾（或者撞上障碍物）。我们需要结束Zipline状态。除此以外类似于这种状态式Move，还需要处理额外的一些打断行为，通过在一些回调中设置新的Move来退出ZiplineMove。
 
 ```c#
 public partial class TdMove_ZipLine : TdPhysicsMove
