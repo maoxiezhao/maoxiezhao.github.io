@@ -5,7 +5,7 @@ subtitle: 基于代码去分析一个类镜之边缘的运动系统.
 author: "ZZZZZY"
 comments: true
 categories: GameDev
-tags: Dev Movement
+tags: Dev
 sidebar: []
 excerpt_size: 100
 post_banner:

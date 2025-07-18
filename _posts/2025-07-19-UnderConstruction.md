@@ -3,8 +3,7 @@ layout: post
 title:  "站点更新施工中"
 subtitle: 全新的站点风格，优化行文结构.
 author: "ZZZZZY"
-comments: true
-categories: Note
+categories: GameDev
 tags: Note
 sidebar: []
 excerpt_size: 100
