@@ -1,31 +1,58 @@
-(() => {
-  // Theme switch
-  const body = document.body;
-  const lamp = document.getElementById("mode");
+// Fix DOM matches function
+if (!Element.prototype.matches) {
+  Element.prototype.matches =
+    Element.prototype.matchesSelector ||
+    Element.prototype.mozMatchesSelector ||
+    Element.prototype.msMatchesSelector ||
+    Element.prototype.oMatchesSelector ||
+    Element.prototype.webkitMatchesSelector ||
+    function(s) {
+      var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+        i = matches.length;
+      while (--i >= 0 && matches.item(i) !== this) {}
+      return i > -1;
+    };
+}
 
-  const toggleTheme = (state) => {
-    if (state === "dark") {
-      localStorage.setItem("theme", "light");
-      body.removeAttribute("data-theme");
-    } else if (state === "light") {
-      localStorage.setItem("theme", "dark");
-      body.setAttribute("data-theme", "dark");
-    } else {
-      initTheme(state);
-    }
-  };
+// Get Scroll position
+function getScrollPos() {
+  var supportPageOffset = window.pageXOffset !== undefined;
+  var isCSS1Compat = ((document.compatMode || "") === "CSS1Compat");
 
-  lamp.addEventListener("click", () =>
-    toggleTheme(localStorage.getItem("theme"))
-  );
+  var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? document.documentElement.scrollLeft : document.body.scrollLeft;
+  var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? document.documentElement.scrollTop : document.body.scrollTop;
 
-  // Blur the content when the menu is open
-  const cbox = document.getElementById("menu-trigger");
+  return { x: x, y: y };
+}
 
-  cbox.addEventListener("change", function () {
-    const area = document.querySelector(".wrapper");
-    this.checked
-      ? area.classList.add("blurry")
-      : area.classList.remove("blurry");
-  });
-})();
+var _scrollTimer = [];
+
+// Smooth scroll
+function smoothScrollTo(y, time) {
+  time = time == undefined ? 500 : time;
+
+  var scrollPos = getScrollPos();
+  var count = 60;
+  var length = (y - scrollPos.y);
+
+  function easeInOut(k) {
+    return .5 * (Math.sin((k - .5) * Math.PI) + 1);
+  }
+
+  for (var i = _scrollTimer.length - 1; i >= 0; i--) {
+    clearTimeout(_scrollTimer[i]);
+  }
+
+  for (var i = 0; i <= count; i++) {
+    (function() {
+      var cur = i;
+      _scrollTimer[cur] = setTimeout(function() {
+        window.scrollTo(
+          scrollPos.x,
+          scrollPos.y + length * easeInOut(cur/count)
+        );
+      }, (time / count) * cur);
+    })();
+  }
+}
+

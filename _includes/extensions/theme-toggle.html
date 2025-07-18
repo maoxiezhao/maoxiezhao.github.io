@@ -1,0 +1,16 @@
+<div class="theme-toggle">
+</div>
+
+{%- assign name = 'night_mode' -%}
+{%- include functions.html func='get_value' default='auto' -%}
+{%- assign night_mode = return -%}
+
+<script>
+  (function() {
+    var html = document.getElementsByTagName('html')[0];
+    html.dataset.theme = 'dark';
+    setTimeout(function() {
+        document.dispatchEvent(new Event('theme-changed'));
+    }, 5);
+  })();
+</script>

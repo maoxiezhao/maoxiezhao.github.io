@@ -1,7 +1,5 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-_drafts
-klise-*.gem
+*.gem
+.bundle
+.sass-cache
+_site
 Gemfile.lock

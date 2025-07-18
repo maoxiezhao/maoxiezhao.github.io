@@ -1,0 +1,48 @@
+{%- include functions.html func='log' level='debug' msg='Get post_banner value' -%}
+{% assign name = 'post_banner' %}
+{%- include functions.html func='get_value' -%}
+{% assign post_banner = return %}
+
+{%- if post_banner.first -%}
+  {%- include functions.html func='log' level='debug' msg='Get post_banner_image value' -%}
+  {% assign name = 'post_banner.image' %}
+  {%- include functions.html func='get_value' -%}
+  {% assign post_banner_image = return | relative_url %}
+{%- else -%}
+  {% assign post_banner_image = post_banner | relative_url %}
+{%- endif -%}
+
+{%- include functions.html func='log' level='debug' msg='Get post_banner_background value' -%}
+{% assign name = 'post_banner.background' %}
+{%- include functions.html func='get_value' -%}
+{% assign post_banner_background = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get post_banner_opacity value' -%}
+{% assign name = 'post_banner.opacity' %}
+{%- include functions.html func='get_value' -%}
+{% assign post_banner_opacity = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get post_banner_height value' -%}
+{% assign name = 'post_banner.height' %}
+{%- include functions.html func='get_value' -%}
+{% assign post_banner_height = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get post_banner_min_height value' -%}
+{% assign name = 'post_banner.min_height' %}
+{%- include functions.html func='get_value' -%}
+{% assign post_banner_min_height = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get post_banner_heading_style value' -%}
+{% assign name = 'post_banner.heading_style' %}
+{%- include functions.html func='get_value' -%}
+{% assign post_banner_heading_style = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get post_banner_subheading_style value' -%}
+{% assign name = 'post_banner.subheading_style' %}
+{%- include functions.html func='get_value' -%}
+{% assign post_banner_subheading_style = return %}
+
+{% if post_banner_image %}
+  {% assign has_post_banner = true %}
+{% endif %}
+

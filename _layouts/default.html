@@ -1,40 +1,29 @@
----
-layout: compress
----
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: " en " }}">
-{% include header.html %}
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-<body data-theme="{{ site.mode }}" class="notransition">
+  {%- include head.html -%}
 
-  <script>
-    const body = document.body;
-    const data = body.getAttribute("data-theme");
+  <body>
 
-    const initTheme = (state) => {
-      if (state === "dark") {
-        body.setAttribute("data-theme", "dark");
-      } else if (state === "light") {
-        body.removeAttribute("data-theme");
-      } else {
-        localStorage.setItem("theme", data);
-      }
-    };
- 
-    initTheme(localStorage.getItem("theme"));
-    
-    setTimeout(() => body.classList.remove("notransition"), 75);
-  </script>
+    {%- include views/header.html -%}
 
-  <div id="home_background"></div>
+    {%- include views/banner.html -%}
 
-  {% include navbar.html %}
-  <div class="wrapper">
-    {% include author.html %}
-    <main aria-label="Content">
-      {{ content }}
+    <!-- {%- include views/post-banner.html -%} -->
+
+    {%- include extensions/hashlocate.html -%}
+
+    {%- include extensions/theme-toggle.html -%}
+
+    {%- include extensions/click-to-top.html -%}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
     </main>
-    {% include footer.html %}
-  </div>
-</body>
+
+    {%- include views/footer.html -%}
+
+  </body>
 </html>

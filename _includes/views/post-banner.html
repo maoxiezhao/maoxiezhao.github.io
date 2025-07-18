@@ -1,0 +1,78 @@
+{%- include functions.html func='log' level='debug' msg='Get post_banner_html value' -%}
+{% assign name = 'post_banner_html' %}
+{%- include functions.html func='get_value' -%}
+{% assign post_banner_html = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get heading value' -%}
+{% assign name = 'heading' %}
+{%- include functions.html func='get_value' -%}
+{% assign heading = return %}
+
+{%- include functions.html func='log' level='debug' msg='Get subheading value' -%}
+{% assign name = 'subheading' %}
+{%- include functions.html func='get_value' -%}
+{% assign subheading = return %}
+
+{%- include functions.html func='get_post_banner' -%}
+
+{%- if has_post_banner -%}
+  {%- if post_banner_background -%}
+  <style>
+    html .post-page-banner {
+      background: {{ post_banner_background }};
+    }
+  </style>
+  {%- endif -%}
+  {%- if post_banner_height -%}
+  <style>
+    {%- assign num = post_banner_height | times: 1 -%}
+    {%- assign unit = post_banner_height | replace_first: num -%}
+    {%- assign post_banner_min_height = post_banner_min_height | default: post_banner_height -%}
+    html .post-page-banner {
+      height:  {{ post_banner_height | times: 0.368 | append: unit }};
+      min-height: {{ post_banner_min_height }};
+    }
+  </style>
+  {%- endif -%}
+
+  {%- if post_banner_opacity -%}
+  <style>
+    html .post-page-banner .post-page-banner-img > *:first-child {
+      opacity: {{ post_banner_opacity }};
+    }
+  </style>
+  {%- endif -%}
+  {%- if post_banner_heading_style -%}
+  <style>
+    html .post-page-banner .post-page-banner-inner > *:first-child > *:nth-child(1) {
+      {{ post_banner_heading_style }}
+    }
+  </style>
+  {%- endif -%}
+  {%- if post_banner_subheading_style -%}
+  <style>
+    html .post-page-banner .post-page-banner-inner > *:first-child > *:nth-child(2) {
+      {{ post_banner_subheading_style }}
+    }
+  </style>
+  {%- endif -%}
+  <section class="post-page-banner">
+    <div class="post-page-banner-img">
+      <div style="background-image: url({{ post_banner_image }})"></div>
+      <img class="img-placeholder" src="{{ post_banner_image }}">
+    </div>
+    <div class="wrapper">
+      <div class="post-page-banner-inner">
+        <div class="post-page-banner-default">
+          <h1 class="post-page-banner-heading">
+            {{ heading | default: page.title | escape }}
+          </h1>
+          <h2 class="post-page-banner-subheading">
+            {{ subheading | default: page.subtitle | escape }}
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
