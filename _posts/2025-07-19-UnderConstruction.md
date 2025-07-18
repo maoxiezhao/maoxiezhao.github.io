@@ -7,7 +7,6 @@ comments: true
 categories: Note
 tags: Note
 sidebar: []
-top: 1
 excerpt_size: 100
 post_banner:
   image: https://s21.ax1x.com/2025/07/19/pV357E8.jpg
